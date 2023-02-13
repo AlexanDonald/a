@@ -31,10 +31,12 @@ table.tbl_point-list img {
 /* slot-style */
 .row_slot {
 	height: 300px;
+	max-height: 300px;
+	min-height: 300px;
 }
 .row_slot > td {
-		min-width:130px;
-		max-width:384px;
+		min-width:300px;
+		max-width:300px;
 		text-align:center;
 }
 
@@ -295,8 +297,18 @@ var detection_slot = function(){
 	}
 };
 
+function audio() {
+    document.getElementById('btn_stop_audio').currentTime = 0; //連続クリックに対応
+    document.getElementById('btn_stop_audio').play(); //クリックしたら音を再生
+}
+
 //-->
 </script>
+
+<audio id="btn_stop_audio">
+    <source src="audio/au.mp3" type="audio/mp3">
+</audio>
+
 </HEAD>
 
 <BODY onload="init_page();">
@@ -327,18 +339,18 @@ var detection_slot = function(){
 </TR>
 <TR class="row_button">
 	<TD class="h60" align="center">
-		<input class="btn_stop" type="button" id="btn_id0" value="STOP" onClick="stop_slot(0);" disabled>
+		<input class="btn_stop" type="button" id="btn_id0" value="STOP" onClick="stop_slot(0);audio()" disabled>
 	</TD>
 	<TD class="h60" align="center">
-		<input class="btn_stop" type="button" id="btn_id1" value="STOP" onClick="stop_slot(1);" disabled>
+		<input class="btn_stop" type="button" id="btn_id1" value="STOP" onClick="stop_slot(1);audio()" disabled>
 	</TD>
 	<TD class="h60" align="center">
-		<input class="btn_stop" type="button" id="btn_id2" value="STOP" onClick="stop_slot(2);" disabled>
+		<input class="btn_stop" type="button" id="btn_id2" value="STOP" onClick="stop_slot(2);audio()" disabled>
 	</TD>
 </TR>
 <TR class="row_button">
 	<TD colspan="3">
-		<input class="btn_start" type="button" id="btn_start" value="START" onClick="init_slot();">
+		<input class="btn_start" type="button" id="btn_start" value="START" onClick="init_slot(); audio()">
 	</TD>
 </TR>
 <TR>
