@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<HTML>
-<HEAD>
+<html>
+<head>
 <meta charset="UTF-8">
 <title>スロット</title>
 <style type="text/css">
-<!--
+
 /* height-size */
 .h240 {
 	height:240px;
@@ -65,14 +65,27 @@ table.tbl_point-list img {
 	height:80px;
 	font-size:30px;
 }
--->
+
+h1{
+	text-align: center;
+}
+
+body{
+	background-color: aliceblue;
+}
+
+.hit-list-text{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-weight: bold;
+}
+
 </style>
 <script language="JavaScript">
-<!--
-/** お勉強のためJSソースを外部ファイルにしてません **/
 
 /// 定数 ///
-var FORMAT_CREDIT = '0000000000';
+var FORMAT_CREDIT = '';
 /// グローバル変数 ///
 var aryTimerId = new Array(0,0,0); //リール用タイマー
 var aryEndCheck = new Array(0,0,0) //STOP判定
@@ -236,7 +249,7 @@ var start_slot = function(index, interval){
 			aryDetect[index] = gnumDetectId;
 		}
 
-		document.getElementById("cel_id"+index).style.backgroundColor="#FFFF00";
+		document.getElementById("cel_id"+index).style.backgroundColor="#87be09";
 		aryEndCheck[index] = 1;
 		setTimeout(detection_slot,100);
 	}
@@ -302,7 +315,6 @@ function audio() {
     document.getElementById('btn_stop_audio').play(); //クリックしたら音を再生
 }
 
-//-->
 </script>
 
 <audio id="btn_stop_audio">
@@ -311,66 +323,66 @@ function audio() {
 
 </HEAD>
 
-<BODY onload="init_page();">
-<HR>
-<H1>スロット</H1>
-<HR>
-<TABLE border="5" align="center">
-<TR class="row_credit font30px">
-	<TD align="right">
+<body onload="init_page();">
+<hr>
+<h1>スロット</h1>>
+<hr>
+<table border="5" align="center">
+<tr class="row_credit font30px">
+	<td align="right">
 		<span>
 			クレジット
 		</span>
-	</TD>
-	<TD colspan="2" align="left">
-		<span id="lblCredit">0000000000</span>
-	</TD>
-</TR>
-<TR class="row_slot">
-	<TD id="cel_id0">
+	</td>
+	<td colspan="2" align="left">
+		<span id="lblCredit"></span>
+	</td>
+</tr>
+<tr class="row_slot">
+	<td id="cel_id0">
 		<IMG class="img_sizemax" src="img/au1.png" id="img_id0">
-	</TD>
-	<TD id="cel_id1">
+	</td>
+	<td id="cel_id1">
 		<IMG class="img_sizemax" src="img/au1.png" id="img_id1">
-	</TD>
-	<TD id="cel_id2">
+	</td>
+	<td id="cel_id2">
 		<IMG class="img_sizemax" src="img/au1.png" id="img_id2">
-	</TD>
-</TR>
-<TR class="row_button">
-	<TD class="h60" align="center">
+	</td>
+</tr>
+<tr class="row_button">
+	<td class="h60" align="center">
 		<input class="btn_stop" type="button" id="btn_id0" value="STOP" onClick="stop_slot(0);audio()" disabled>
-	</TD>
-	<TD class="h60" align="center">
+	</td>
+	<td class="h60" align="center">
 		<input class="btn_stop" type="button" id="btn_id1" value="STOP" onClick="stop_slot(1);audio()" disabled>
-	</TD>
-	<TD class="h60" align="center">
+	</td>
+	<td class="h60" align="center">
 		<input class="btn_stop" type="button" id="btn_id2" value="STOP" onClick="stop_slot(2);audio()" disabled>
-	</TD>
-</TR>
-<TR class="row_button">
-	<TD colspan="3">
-		<input class="btn_start" type="button" id="btn_start" value="START" onClick="init_slot(); audio()">
-	</TD>
-</TR>
-<TR>
-	<TD colspan="3" align="left">
-	<SPAN class="font20px">
-		当たり一覧表
+	</td>
+</tr>
+<tr class="row_button">
+	<td colspan="3">
+		<input class="btn_start" type="button" id="btn_start" value="BET" onClick="init_slot(); audio()">
+	</td>
+</tr>
+<tr>
+	<td colspan="3" align="left">
+	<span class="font20px">
+		<div class="hit-list-text">当たり一覧表</div>
 		<TABLE class="tbl_point-list">
-		<TR><TD><img src="img/au1.png"><img src="img/au1.png"><img src="img/au1.png"></TD><TD>100コイン</TD></TR>
-		<TR><TD><img src="img/au2.png"><img src="img/au2.png"><img src="img/au2.png"></TD><TD>400コイン</TD></TR>
-		<TR><TD><img src="img/au3.png"><img src="img/au3.png"><img src="img/au3.png"></TD><TD>900コイン</TD></TR>
-		<TR><TD><img src="img/au4.png"><img src="img/au4.png"><img src="img/au4.png"></TD><TD>1600コイン</TD></TR>
-		<TR><TD><img src="img/au5.png"><img src="img/au5.png"><img src="img/au5.png"></TD><TD>2500コイン</TD></TR>
+		<tr><td><img src="img/au1.png"><img src="img/au1.png"><img src="img/au1.png"></td><td>100コイン</td></tr>
+		<tr><td><img src="img/au2.png"><img src="img/au2.png"><img src="img/au2.png"></td><td>400コイン</td></tr>
+		<tr><td><img src="img/au3.png"><img src="img/au3.png"><img src="img/au3.png"></td><td>900コイン</td></tr>
+		<tr><td><img src="img/au4.png"><img src="img/au4.png"><img src="img/au4.png"></td><td>1600コイン</td></tr>
+		<tr><td><img src="img/au5.png"><img src="img/au5.png"><img src="img/au5.png"></td><td>2500コイン</td></tr>
 		</TABLE>
-	</SPAN>
-	</TD>
-</TR>
-</TABLE>
+	</span>
+	</td>
+</tr>
+</table>
 
-<input type="checkbox" id="chk_mustdet" onClick="onchange_check('chk_mustdet');"><label for="chk_mustdet">当たり確定セット</label><br>
+<input type="checkbox" id="chk_mustdet" onClick="onchange_check('chk_mustdet');"><label for="chk_mustdet">設定6</label><br>
 <input type="checkbox" id="chk_msgdisplay" onClick="onchange_check('chk_msgdisplay');"><label for="chk_msgdisplay">当たりメッセージ表示</label><br>
 
-</BODY>
-</HTML>
+</body>
+</html>
