@@ -1,0 +1,284 @@
+body {
+  background: linear-gradient(to bottom right, blue, pink);
+  /* background: white; */
+  font-size: 16px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  user-select:none;
+  -webkit-user-select:none;
+  -ms-user-select: none;
+  -moz-user-select:none;
+  -khtml-user-select:none;
+  -webkit-user-drag:none;
+  -khtml-user-drag:none;
+}
+
+main {
+  width: 870px;
+  height: 690px;
+  background: black;
+  padding: 20px;
+  margin: 16px auto;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.panels {
+  border: 8px solid black;
+  /* background: white; */
+}
+
+.panel img {
+  width: 270px;
+  height: 222px;
+  vertical-align: bottom;
+}
+
+.bonuslamp {
+  width: 100px;
+  height: 410px;
+  display: block;
+  justify-content:space-between;
+  border-radius: 10%;
+}
+
+#biglamp{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  border-radius: 10%;
+
+}
+
+#reglamp{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 10%;
+
+}
+
+.coinHyoji {
+  width: 500px;
+  height: 80px;
+
+  margin:auto;
+
+  display: block;
+  justify-content:space-between;
+  position: relative;
+}
+
+.coinlabel {
+  text-align: center;
+  font-size: 20px;
+  color: white;
+}
+
+#coinHyojiHt {
+  background-color: #fff;
+  border: 5px solid black;
+
+  text-align: right;
+  font-size: 40px;
+  border-color: black;
+}
+
+.btns {
+  width: 800px;
+  margin: 16px auto;
+  display: flex;
+  justify-content:space-between;
+}
+
+#chance{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  /* opacity: 0.1; */
+}
+
+#stop1{
+  cursor: pointer;
+  width: 120px;
+  height: 75px;
+  background: #f81119;
+  box-shadow: 0 7px 0 #d1483e;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  position: relative;
+}
+
+#stop1:active {
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+#stop2{
+  cursor: pointer;
+  width: 120px;
+  height: 75px;
+  background: #f81119;
+  box-shadow: 0 7px 0 #d1483e;
+  border: 1px solid gainsboro;
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  position: relative;
+}
+
+#stop2:active {
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+#stop3{
+  cursor: pointer;
+  width: 120px;
+  height: 75px;
+  background: #f81119;
+  box-shadow: 0 7px 0 #d1483e;
+  border: 1px solid gainsboro;
+
+  border-radius: 50%;
+  text-align: center;
+  color: #fff;
+  user-select: none;
+  position: relative;
+}
+
+#stop3:active {
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+#spin{
+  cursor: pointer;
+  width: 105px;
+  height: 60px;
+  background: #3498db;
+  box-shadow: 0 5px 0 #2880b9;
+  border: 1px solid gainsboro;
+  border-radius: 50px;
+  line-height: 54px;
+  text-align: center;
+  font-size: 21px;
+  color: #fff;
+  user-select: none;
+  position: relative;
+}
+
+#spin:active {
+  margin-top: 10px;
+  box-shadow: none;
+}
+
+.flexbox{
+  display: flex;
+  max-width: 800px;
+  margin: auto;
+}
+
+.flex_item{
+  display: flex;
+}
+
+.setumei{
+  width: 650px;
+  height: 400px;
+  margin-left: 50px;
+  background-color: white;
+  border: 5px solid black;
+}
+
+.setu_title{
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.setu_list{
+  margin: 10px;
+}
+
+.setu_item{
+  height: 70px;
+  width: 300px;
+  display: flex;
+  line-height: 50px;
+}
+
+.list_img{
+  height: 50px;
+  width: 50px;
+  border: 1px solid black;
+}
+
+
+ul{
+  padding-left:0
+}
+
+li{
+  list-style:none
+}
+
+.reelShoto {
+  opacity: 0.8;
+}
+
+.HighAndLowReel {
+  opacity: 0.1;
+}
+
+.inactive {
+  opacity: 1;
+}
+
+.stop_inactive {
+  opacity: 0.5;
+}
+
+.chance_on_inactive {
+  opacity: 1;
+}
+
+.chance_off_inactive {
+  opacity: 0.1;
+}
+
+.biglamp_on_inactive {
+  opacity: 1;
+}
+
+.biglamp_off_inactive {
+  opacity: 0.1;
+}
+
+.reglamp_on_inactive {
+  opacity: 1;
+}
+
+.reglamp_off_inactive {
+  opacity: 0.1;
+}
+
+.big{
+  background: gold;
+}
+
+.reg{
+  background: dodgerblue;
+}
+
+
+
+
+
